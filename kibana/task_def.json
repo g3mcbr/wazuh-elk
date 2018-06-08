@@ -1,7 +1,7 @@
 [
   {
     "name": "kibana",
-    "image": "462818068088.dkr.ecr.us-east-1.amazonaws.com/custom_kibana",
+    "image": "580573161836.dkr.ecr.us-east-1.amazonaws.com/custom_kibana",
     "cpu": 10,
     "memory": 1024,
     "environment": [

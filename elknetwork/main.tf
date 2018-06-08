@@ -186,7 +186,7 @@ resource "aws_security_group" "public-allow-inbound" {
 
 terraform {
   backend "s3" {
-    bucket = "elk-test-running-state"
+    bucket = "tf-up-and-running-state"
     key = "dev/elktest/vpc/terraform.tfstate"
     region = "us-east-1"
   }

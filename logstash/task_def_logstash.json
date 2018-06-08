@@ -1,7 +1,7 @@
 [
   {
       "name": "logstash",
-      "image": "462818068088.dkr.ecr.us-east-1.amazonaws.com/custom_logstash",
+      "image": "580573161836.dkr.ecr.us-east-1.amazonaws.com/custom_logstash",
       "cpu": 10,
       "memory": 2048,
       "environment": [

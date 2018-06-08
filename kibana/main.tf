@@ -51,7 +51,7 @@ module "kibana" {
 
 terraform {
   backend "s3" {
-    bucket = "elk-test-running-state"
+    bucket = "tf-up-and-running-state"
     key = "dev/elktest/kibana/terraform.tfstate"
     region = "us-east-1"
   }

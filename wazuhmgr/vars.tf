@@ -47,7 +47,7 @@ variable "container_port" {
 }
 #######################################
 variable "vpc_remote_state_bucket" {
-  default = "elk-test-running-state"
+  default = "tf-up-and-running-state"
 }
 
 variable "vpc_remote_state_key" {
@@ -55,7 +55,7 @@ variable "vpc_remote_state_key" {
 }
 
 variable "cluster_remote_state_bucket" {
-  default = "elk-test-running-state"
+  default = "tf-up-and-running-state"
 }
 
 variable "cluster_remote_state_key" {
