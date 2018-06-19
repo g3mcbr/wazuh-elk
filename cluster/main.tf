@@ -68,7 +68,8 @@ module "cluster_lk" {
   private_subnet_ids        = "${data.terraform_remote_state.newvpc.private_subnet_ids}"
   key_name                  = "${var.key_name}"
   user_data_script          = "ecs_user_data.sh"
-  instance_count            = 2
+#  instance_count            = 2
+  instance_count            = "${length(data.terraform_remote_state.newvpc.private_subnet_ids)}"
   iam_instance_profile      = "${data.terraform_remote_state.newvpc.ecs_lk_instance_profile_id}"
   vol_count                 = 0
   vol_id                    = []

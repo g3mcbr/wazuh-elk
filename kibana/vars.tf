@@ -23,7 +23,7 @@ variable "external_elb_name" {
 }
 variable "desired_count" {
   type = "string"
-  default = "2"
+  default = "3"
 }
 
 variable "container_name" {
@@ -35,6 +35,7 @@ variable "container_port" {
   type = "string"
   default = "5601"
 }
+
 
 #######################################
 variable "vpc_remote_state_bucket" {
