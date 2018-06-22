@@ -62,7 +62,8 @@ resource "aws_internet_gateway" "internet_gateway" {
 #  subnet_id     = "${aws_subnet.public_subnet.0.id}"
 #  depends_on    = ["aws_internet_gateway.internet_gateway"]
 #}
-/**** my work ****/
+
+/**** nat instance details ****/
 data "aws_ami" "nat_ami" {
   most_recent = true
   owners    = ["amazon"]
@@ -109,7 +110,8 @@ tags {
   }
 }
 
-/**** end of my work ****/
+/**** end of nat instance details ****/
+
 /*
  * Routes for private subnets to use NAT gateway
  */
