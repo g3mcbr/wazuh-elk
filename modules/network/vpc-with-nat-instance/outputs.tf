@@ -38,3 +38,7 @@ output "aws_zones" {
 output "nat_instance_ip" {
   value = "${aws_instance.nat_instance.public_ip}"
 }
+
+output "ecsTaskRole_arn" {
+  value = "${aws_iam_role.ecsTaskRole.arn}"
+}

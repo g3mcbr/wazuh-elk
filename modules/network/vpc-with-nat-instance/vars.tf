@@ -25,7 +25,16 @@ variable "enable_dns_hostnames" {
   type    = "string"
   default = "false"
 }
+
 ######################
 variable "key_name" {
+  type = "string"
+}
+
+variable "ecsTaskRoleAssumeRolePolicy" {
+  type = "string"
+}
+
+variable "ecsTaskRolePolicy" {
   type = "string"
 }

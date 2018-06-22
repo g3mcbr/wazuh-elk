@@ -13,11 +13,14 @@ provider "aws" {
 #}
 
 module "vpc" {
-  source                    = "../modules/network/vpc-with-nat-instance"
-  app_name  = "${var.app_name}"
-  app_env   = "${var.app_env}"
-  aws_zones = "${var.aws_zones}"
-  key_name  = "${var.key_name}"
+  source                            = "../modules/network/vpc-with-nat-instance"
+  app_name                          = "${var.app_name}"
+  app_env                           = "${var.app_env}"
+  aws_zones                         = "${var.aws_zones}"
+  key_name                          = "${var.key_name}"
+  ecsTaskRoleAssumeRolePolicy       = "${var.ecsTaskRoleAssumeRolePolicy}"
+  ecsTaskRolePolicy                 = "${var.ecsTaskRolePolicy}"
+
 }
 
 
