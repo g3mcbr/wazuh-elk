@@ -8,7 +8,7 @@ sed -i "s;http:\/\/elasticsearch:9200;$ELASTICSEARCH_URL;g" /usr/share/kibana/co
 #IPS=$CLUSTER_IPS
 IPS="10.0.11.101 10.0.22.102 10.0.33.103"
 
-COUNT=3
+COUNT=6
 MASTER=0
 
 findmaster()
