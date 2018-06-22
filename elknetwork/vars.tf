@@ -46,6 +46,11 @@ variable "lk_cluster_name" {
   default = "logstash"
 }
 
+variable "key_name" {
+  type = "string"
+  default = "elk-test"
+}
+
 variable "ecsInstanceRoleAssumeRolePolicy" {
   type = "string"
 

@@ -52,6 +52,7 @@ module "kibana" {
 #  target_group_arn          = "${data.terraform_remote_state.loadbalancers.kibana_external_target_group_arn}"
   elb_name                  = "${data.terraform_remote_state.newvpc.external_elb_name}"
   container_def_json        = "${data.template_file.task_def.rendered}"
+  task_role_arn             = "${data.terraform_remote_state.newvpc.ecsInstanceRole_arn}"
   desired_count             = "${var.desired_count}"
   container_name            = "${var.container_name}"
   container_port            = "${var.container_port}"

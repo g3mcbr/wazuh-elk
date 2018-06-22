@@ -19,6 +19,7 @@ resource "aws_ecs_service" "app_svc" {
   cluster               = "${var.cluster}"
   task_definition       = "${aws_ecs_task_definition.app_task.arn}"
   desired_count         = "${var.desired_count}"
+  #iam_role              = "${var.task_role_arn}"
 
   load_balancer {
     elb_name            = "${var.elb_name}"
