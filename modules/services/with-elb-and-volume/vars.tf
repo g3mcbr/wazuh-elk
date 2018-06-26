@@ -38,6 +38,6 @@ variable "container_port" {
   type = "string"
 }
 
-#variable "task_role_arn" {
-#  type = "string"
-#}
+variable "task_role_arn" {
+  type = "string"
+}

@@ -63,6 +63,6 @@ variable "iam_instance_profile" {
 #  type = "string"
 #}
 
-variable "ip_value" {
-  type = "string"
-}
+#variable "ip_value" {
+#  type = "string"
+#}

@@ -51,6 +51,11 @@ variable "key_name" {
   default = "elk-test"
 }
 
+variable "src_ips" {
+  type = "list"
+  default = ["76.177.144.62/32","162.40.29.3/32"]
+}
+
 variable "ecsInstanceRoleAssumeRolePolicy" {
   type = "string"
 
@@ -151,10 +156,12 @@ variable "ecsTaskRolePolicy" {
       "Sid": "",
       "Effect": "Allow",
       "Action": [
-        "s3:GetObject"
+        "ec2:DescribeInstances",
+        "ecs:ListContainerInstances",
+        "ecs:DescribeContainerInstances"
       ],
       "Resource": [
-        "arn:aws:s3:::my-task-secrets-bucket/*"
+        "*"
       ]
     }
   ]

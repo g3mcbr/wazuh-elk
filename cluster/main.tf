@@ -43,7 +43,7 @@ module "cluster_es" {
   aws_zones                 = "${data.terraform_remote_state.newvpc.aws_zones}"
   private_subnet_ids        = "${data.terraform_remote_state.newvpc.private_subnet_ids}"
   key_name                  = "${var.key_name}"
-  ip_value                  = 10
+  #ip_value                  = 10
   user_data_script          = "ecs_user_data_with_mount.sh"
   instance_count            = "${length(data.terraform_remote_state.newvpc.private_subnet_ids)}"
   iam_instance_profile      = "${data.terraform_remote_state.newvpc.ecs_es_instance_profile_id}"
@@ -68,7 +68,7 @@ module "cluster_lk" {
   aws_zones                 = "${data.terraform_remote_state.newvpc.aws_zones}"
   private_subnet_ids        = "${data.terraform_remote_state.newvpc.private_subnet_ids}"
   key_name                  = "${var.key_name}"
-  ip_value                  = 100
+  #ip_value                  = 100
   user_data_script          = "ecs_user_data.sh"
 #  instance_count            = 2
   instance_count            = "${length(data.terraform_remote_state.newvpc.private_subnet_ids)}"

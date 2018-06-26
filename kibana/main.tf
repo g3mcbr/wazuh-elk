@@ -25,11 +25,11 @@ data "terraform_remote_state" "cluster" {
   }
 }
 
-data "null_data_source" "newclusterips"{
-  inputs = {
-    cluster_ips = "${join(" ",  data.terraform_remote_state.cluster.logstash_ecs_host_ips)}"
-  }
-}
+#data "null_data_source" "newclusterips"{
+#  inputs = {
+#    cluster_ips = "${join(" ",  data.terraform_remote_state.cluster.logstash_ecs_host_ips)}"
+#  }
+#}
 
 data "template_file" "task_def" {
   template = "${file("${path.module}/task_def.json")}"
@@ -38,7 +38,7 @@ data "template_file" "task_def" {
   elasticsearch_node  = "${data.terraform_remote_state.newvpc.elasticsearch_elb_dns_name}"
 #  cluster_ip1         = "${element("${data.terraform_remote_state.cluster.logstash_ecs_host_ips}", 0)}"
 #  cluster_ip2         = "${element("${data.terraform_remote_state.cluster.logstash_ecs_host_ips}", 1)}"
-  cluster_ips          = "${data.null_data_source.newclusterips.outputs.cluster_ips}"
+#  cluster_ips          = "${data.null_data_source.newclusterips.outputs.cluster_ips}"
   }
 }
 
